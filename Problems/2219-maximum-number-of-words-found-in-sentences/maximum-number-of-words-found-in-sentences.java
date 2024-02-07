@@ -3,9 +3,7 @@ class Solution {
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < sentences.length; i++) {
 
-            String[] words = sentences[i].split("\\s+");
-
-            max = Math.max(max, words.length);
+            max = Math.max(max, sentences[i].split("\\s+").length);
 
         }
 
