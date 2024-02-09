@@ -1,30 +1,25 @@
+import java.util.*;
+
 class Solution {
     public long maximumSubarraySum(int[] nums, int k) {
-        Map<Integer,Long> map=new HashMap<>();
-        long curSum=0;
-        long maxSum=Long.MIN_VALUE;
-        for(int a:nums){
+        Map<Integer, Long> cumulativeSums = new HashMap<>();
+        long currentSum = 0;
+        long maxSum = Long.MIN_VALUE;
 
-            if(map.containsKey(a-k)){
-
-                    long minValue=map.get(a-k);
-                    maxSum=Math.max(maxSum,curSum+a-minValue );
-
+        for (int value : nums) {
+            if (cumulativeSums.containsKey(value - k)) {
+                long minValue = cumulativeSums.get(value - k);
+                maxSum = Math.max(maxSum, currentSum + value - minValue);
             }
-                 if(map.containsKey(a+k)){
-
-                    long minValue=map.get(a+k);
-                    maxSum=Math.max(maxSum,curSum+a-minValue );
-
+            if (cumulativeSums.containsKey(value + k)) {
+                long minValue = cumulativeSums.get(value + k);
+                maxSum = Math.max(maxSum, currentSum + value - minValue);
             }
 
-            map.put(a,Math.min(map.getOrDefault(a, Long.MAX_VALUE),curSum));
-            curSum+=a;
-
-
+            cumulativeSums.put(value, Math.min(cumulativeSums.getOrDefault(value, Long.MAX_VALUE), currentSum));
+            currentSum += value;
         }
+
         return maxSum == Long.MIN_VALUE ? 0 : maxSum;
-
-
     }
 }
