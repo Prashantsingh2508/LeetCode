@@ -1,88 +1,18 @@
-
 class Solution {
     public int minLengthAfterRemovals(List<Integer> nums) {
-     
-        int i = 0;
-        Set<Integer> removed = new HashSet<>();
-        for (int j = nums.size() / 2; j < nums.size(); j ++) {
-            if (nums.get(j) > nums.get(i) && !removed.contains(i)) {
-                removed.add(i);
-                removed.add(j);
-                i ++;
+        int ans=0,n=nums.size();
+        int mid=(n+1)/2,i=0;
+        while(mid<n){
+            if(nums.get(i)<nums.get(mid)){
+                ans+=2;
+                i++;
+                mid++;
+            }
+            else{
+                mid++;
             }
         }
-        return nums.size() - removed.size();
+        return nums.size()-ans;
     }
+    
 }
-
-
-
-    
-
-
-    
-    
-    
-
-    
-    
-
-    
-        
-    
-
-    
-        
-        
-        
-    
-
-
-    
-    
-
-    
-        
-        
-    
-
-    
-        
-        
-    
-
-    
-        
-    
-
-    
-        
-    
-
-    
-        
-    
-
-    
-        
-    
-
-    
-        
-        
-    
-
-  
-
-    
-        
-    
-
-    
-
-    
-        
-    
-            
-                
-                
