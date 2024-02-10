@@ -2,8 +2,7 @@ class Solution {
     public String reversePrefix(String word, char ch) {
         
         char c[]=word.toCharArray();
- 
-        StringBuffer sb=new StringBuffer();
+
         for(int i=0;i<word.length();i++){
 
 
