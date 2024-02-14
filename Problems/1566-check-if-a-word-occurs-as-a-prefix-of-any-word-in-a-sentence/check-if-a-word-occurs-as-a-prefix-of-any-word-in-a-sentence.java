@@ -2,22 +2,34 @@ class Solution {
     public int isPrefixOfWord(String sentence, String searchWord) {
 
      String str[] = sentence.split("\\s+");
-        int answer = 1;
-        int flag=1;
-        for (int i = 0; i < str.length; i++) {
-            if (str[i].length() >= searchWord.length()) {
-                if (search(str[i], searchWord)) {
-                    flag=0;
-                    answer = answer + i;
-                }
-                if (answer > 0 && flag==0) {
-                    
-                    break;
-                }
-            }
-        }
 
-        return answer > 0 && flag==0 ? answer : -1;
+    for(int i=0;i<str.length;i++){
+
+        if(str[i].startsWith(searchWord)){
+
+            return (i+1);
+
+        }
+    }
+
+    return -1;
+
+    //     int answer = 1;
+    //     int flag=1;
+    //     for (int i = 0; i < str.length; i++) {
+    //         if (str[i].length() >= searchWord.length()) {
+    //             if (search(str[i], searchWord)) {
+    //                 flag=0;
+    //                 answer = answer + i;
+    //             }
+    //             if (answer > 0 && flag==0) {
+                    
+    //                 break;
+    //             }
+    //         }
+    //     }
+
+    //     return answer > 0 && flag==0 ? answer : -1;
 
 
     }
