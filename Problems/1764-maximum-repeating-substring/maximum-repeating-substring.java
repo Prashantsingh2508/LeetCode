@@ -9,18 +9,20 @@ class Solution {
         // return count;
 
 // Brute Force
-   int count = 0;
+//    
+int count = 0;
         StringBuilder str = new StringBuilder(word);
 
         while (sequence.contains(str.toString())) {
             count++;
-            str.append(word); 
+          str.append(word); 
         }
 
         return count;
 
 
     }
+
 
 
 // private static void countSub(String str,String match,String subStr){
