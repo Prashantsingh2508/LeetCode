@@ -15,6 +15,7 @@ class Solution {
                a[i]=0;
         }
         
+        // This only run if the array has [9,9,9]
         
       int new_array[]=new int[a.length+1];
         new_array[0]=1;
