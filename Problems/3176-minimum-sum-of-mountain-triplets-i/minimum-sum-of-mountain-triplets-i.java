@@ -22,12 +22,6 @@ class Solution {
                 }
                 right = arr.length - 1;
                 left++;
-
-//                if(  arr[right] < arr[left]) {
-//
-//                    min = Math.min(min, arr[i] + arr[left] + arr[right]);
-//
-//                }
             }
         }
         
