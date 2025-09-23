@@ -2,11 +2,6 @@ class Solution {
     public int minimumSum(int[] arr) {
          int min = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length - 2; i++) {
-
-            // if (i > 0 && arr[i] == arr[i - 1]) {
-            //     continue;
-            // }
-
             int left = i + 1;
             int right = arr.length - 1;
             while (left < right) {
@@ -18,7 +13,6 @@ class Solution {
                         }
                         right--;
                     }
-
                 }
                 right = arr.length - 1;
                 left++;
