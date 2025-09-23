@@ -3,9 +3,9 @@ class Solution {
          int min = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length - 2; i++) {
 
-            if (i > 0 && arr[i] == arr[i - 1]) {
-                continue;
-            }
+            // if (i > 0 && arr[i] == arr[i - 1]) {
+            //     continue;
+            // }
 
             int left = i + 1;
             int right = arr.length - 1;
