@@ -6,7 +6,6 @@ class Solution {
             int right = arr.length - 1;
             while (left < right) {
                 if (arr[left] > arr[i]) {
-                   // int sum1 = arr[left] + arr[i];
                     while (right > left) {
                         if (arr[right] < arr[left]) {
                             min = Math.min(min, arr[left] + arr[i] + arr[right]);
@@ -18,11 +17,6 @@ class Solution {
                 left++;
             }
         }
-        
-        
-
         return (min>100000)?-1:min;
-
-
     }
 }
