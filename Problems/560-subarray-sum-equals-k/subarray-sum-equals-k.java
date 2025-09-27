@@ -1,7 +1,6 @@
 class Solution {
     public int subarraySum(int[] arr, int k) {
         int n = arr.length;
-     //   int k = 3;
         int count = 0;
         int i = 0;
         while (i < n) {
