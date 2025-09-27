@@ -1,6 +1,6 @@
 class Solution {
     public boolean checkSubarraySum(int[] arr, int k) {
-         int n = arr.length;
+       
         
         boolean flag = false;
      
@@ -9,7 +9,7 @@ class Solution {
         map.put(0, -1);
         int prefix = 0;
 
-        for (int a = 0; a < n; a++) {
+        for (int a = 0; a < arr.length; a++) {
             prefix = (prefix + arr[a]) % k;
 
             if (map.containsKey(prefix)) {
@@ -20,7 +20,8 @@ class Solution {
                 }
             }
             else{
-            map.put(prefix, map.getOrDefault(prefix, a));}
+            map.put(prefix, map.getOrDefault(prefix, a));
+            }
 
         }
     return flag;
