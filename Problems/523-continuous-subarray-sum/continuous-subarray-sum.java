@@ -19,8 +19,8 @@ class Solution {
                     break;
                 }
             }
-
-            map.put(prefix, map.getOrDefault(prefix, a));
+            else{
+            map.put(prefix, map.getOrDefault(prefix, a));}
 
         }
     return flag;
