@@ -25,7 +25,7 @@ class Solution {
 
             } else {
 
-                i++; // traverse until not get a mid value full filling of peak
+                i++; // traverse until not get a mid value that full filling of peak
             }
 
         }
